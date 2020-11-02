@@ -7,7 +7,7 @@ class LorenzSystem:
         self.rho = 28.
         self.beta = 8. / 3.
 
-        self.initVector = [0.2, 0, 0]
+        self.initVector = [0.1, 0, 0]
     
     
     def computeState(self, stateVector, t):
