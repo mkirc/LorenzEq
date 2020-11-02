@@ -22,17 +22,19 @@ class LorenzPlotter:
 
 
 
-    def plt(self, p, savePath):
+    def plot(self, p, lineColor='w'):
 
         self.ax.plot(p[0], p[1], p[2], 
-                color='w', 
-                alpha=0.5,
+                color=lineColor, 
+                # alpha=0.5,
                 linewidth=0.3)
-        # self.ax.set_xlim((-30,30))
-        # self.ax.set_ylim((-30,30))
-        # self.ax.set_zlim((0,50))
-        
-        
-        plt.savefig(savePath, dpi=100)
+    
+
+    def save(self, savePath=None):
+
+        if not savePath:
+            plt.show()
+        else:
+            plt.savefig(savePath, dpi=100)
         # plt.show()
         plt.close()
